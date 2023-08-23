@@ -35,13 +35,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.044s</div>
+<div class="counter">8.965s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox skipped" id="successRate">
-<div class="percent">-</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -64,7 +64,10 @@
 <a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
@@ -78,26 +81,91 @@
 </tr>
 </thead>
 <tr>
-<td class="skipped">Obtener Status code</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="success">Obtener Status code</td>
+<td class="success">8.965s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
 <div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>200
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Age: 0
+Cache-Control: max-age=259200
+Content-Length: 434
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Aug 2023 05:52:58 GMT
+Etag: W/&quot;1b2-t0DCRFfJaDmsDZ4BB64x8V8zHP0&quot;
+Expires: Sat, 26 Aug 2023 05:52:58 GMT
+Server: Netlify
+Strict-Transport-Security: max-age=31536000
+X-Nf-Request-Id: 01H8GF81ZAN8NDFHXJYMZC94CQ
+X-Powered-By: Express
+
+{
+    &quot;id&quot;: 14,
+    &quot;name&quot;: &quot;Alien Morty&quot;,
+    &quot;status&quot;: &quot;unknown&quot;,
+    &quot;species&quot;: &quot;Alien&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;gender&quot;: &quot;Male&quot;,
+    &quot;origin&quot;: {
+        &quot;name&quot;: &quot;unknown&quot;,
+        &quot;url&quot;: &quot;&quot;
+    },
+    &quot;location&quot;: {
+        &quot;name&quot;: &quot;Citadel of Ricks&quot;,
+        &quot;url&quot;: &quot;https://rickandmortyapi.com/api/location/3&quot;
+    },
+    &quot;image&quot;: &quot;https://rickandmortyapi.com/api/character/avatar/14.jpeg&quot;,
+    &quot;episode&quot;: [
+        &quot;https://rickandmortyapi.com/api/episode/10&quot;
+    ],
+    &quot;url&quot;: &quot;https://rickandmortyapi.com/api/character/14&quot;,
+    &quot;created&quot;: &quot;2017-11-04T20:51:31.373Z&quot;
+}
+io.restassured.internal.RestAssuredResponseImpl@4fd3b20a
+{
+    &quot;id&quot;: 14,
+    &quot;name&quot;: &quot;Alien Morty&quot;,
+    &quot;status&quot;: &quot;unknown&quot;,
+    &quot;species&quot;: &quot;Alien&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;gender&quot;: &quot;Male&quot;,
+    &quot;origin&quot;: {
+        &quot;name&quot;: &quot;unknown&quot;,
+        &quot;url&quot;: &quot;&quot;
+    },
+    &quot;location&quot;: {
+        &quot;name&quot;: &quot;Citadel of Ricks&quot;,
+        &quot;url&quot;: &quot;https://rickandmortyapi.com/api/location/3&quot;
+    },
+    &quot;image&quot;: &quot;https://rickandmortyapi.com/api/character/avatar/14.jpeg&quot;,
+    &quot;episode&quot;: [
+        &quot;https://rickandmortyapi.com/api/episode/10&quot;
+    ],
+    &quot;url&quot;: &quot;https://rickandmortyapi.com/api/character/14&quot;,
+    &quot;created&quot;: &quot;2017-11-04T20:51:31.373Z&quot;
+}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
- _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
-(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
- |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
-(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
-                                                                                
+<pre>[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST PENDING: Obtener Status code
----------------------------------------------------------------------------------
+TEST PASSED: Obtener Status code
+----------------------------------------------------------------------------
 </pre>
 </span>
 </div>
@@ -109,7 +177,7 @@ TEST PENDING: Obtener Status code
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 21/08/2023, 1:16:02 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 23/08/2023, 12:53:00 a. m.</p>
 </div>
 </div>
 </body>

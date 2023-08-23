@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/obtener_respuesta.feature",
-        glue = "co.com.greyd.stepdefinitions",
+        glue = "co.com.greyd.stepdefinitions.obtenerrespuesta",
         snippets = SnippetType.CAMELCASE
 )
 public class ObtenerRespuesta {
